@@ -27,7 +27,11 @@ function Maybe.pcall<TupleType, ReturnType>(
     end
 end
 
-function Maybe.retry<TupleType, ReturnType>(retryAmount: number, callback: (...TupleType) -> ReturnType, ...: TupleType): Maybe<ReturnType>
+function Maybe.retry<TupleType, ReturnType>(
+    retryAmount: number,
+    callback: (...TupleType) -> ReturnType, ...: TupleType
+): Maybe<ReturnType>
+
     local result = Maybe.new(nil, "Could not compute value (retry)")
     local currentCounter: number = 0
     while not result:Exists() and currentCounter <= retryAmount do
