@@ -1,0 +1,12 @@
+{
+    "name": "Maybe",
+    "tree": {
+        "$path": "Include/Linking.luau",
+        "Packages": {
+            "$path": "Packages",
+            "Maybe": {
+                "$path": "src"
+            }
+        }
+    }
+}
