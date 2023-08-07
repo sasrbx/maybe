@@ -13,10 +13,10 @@ jobs:
       - name: Checkout Main
         uses: actions/checkout@v3
 
-      - name: Setup Aftman
-        uses: Roblox/setup-aftman@v1
-        with: 
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ok-nick/setup-aftman@v0.3.0
+        name: Install aftman
+        with:
+          token: ${{ SECRETS.GITHUB_TOKEN }}
 
       - name: Install Aftman Toolchains
         run: aftman install
@@ -72,10 +72,10 @@ jobs:
       - name: Checkout development
         uses: actions/checkout@v3
 
-      - name: Setup Aftman
-        uses: Roblox/setup-aftman@v1
-        with: 
-          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: ok-nick/setup-aftman@v0.3.0
+        name: Install aftman
+        with:
+          token: ${{ SECRETS.GITHUB_TOKEN }}
 
       - name: Install Aftman Toolchains
         run: aftman install
