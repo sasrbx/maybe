@@ -2,10 +2,10 @@ name: Releases
 
 on: push
 
-jobs: 
-  permissions:
-    contents: write
+permissions:
+  contents: write
 
+jobs: 
   deploy:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
